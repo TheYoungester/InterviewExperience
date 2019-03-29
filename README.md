@@ -23,6 +23,16 @@
 ### [虚拟机性能测试与故障处理工具](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#虚拟机性能测试与故障处理工具)
 > 1. [jdk的命令行工具](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#jdk的命令行工具)
 > 2. [jdk的可视化工具](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#jdk的可视化工具)
+### [虚拟机类加载机制](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#虚拟机类加载机制)
+> 1. [概述](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#1-概述)
+> 2. [类加载时机](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#2-类加载时机)
+> 3. [类加载的过程](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#3-类加载的过程)
+> 4. [类加载器](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#4-类加载器)
+### [虚拟机字节码执行引擎](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#虚拟机字节码执行引擎)
+> * [运行时的栈桢结构](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#运行时的栈桢结构)
+> * [方法调用](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#方法调用)
+> * [基于字节码解释执行引擎](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#基于字节码解释执行引擎)
+
 
 ## spring
 
