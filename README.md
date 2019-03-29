@@ -18,8 +18,8 @@
 ### 5.
 
 ## mysql
-### 1.mysql的搜索引擎
-### 2.mysql的索引优化
+### 1.mysql的搜索引擎(mysql)
+### 2.[mysql的索引优化](mysql)
 ### 3.[数据库的事务机制](www.baidu.com)
 
 ## redis
