@@ -14,9 +14,15 @@
 > 3. [对象的内存布局](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#3对象的内存布局)
 > 4. [对象的访问定位](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#4对象的访问定位)
 > 5. [实战：OutOfMemoryError异常](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#5实战OutOfMemoryError异常)
-### []()
-### []()
-### []()
+### [垃圾收集器及内存分配策略](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#垃圾收集器及内存分配策略)
+> 1. [对象已死的判断](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#1-对象已死的判断)
+> 2. [垃圾回收算法](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#2-垃圾回收算法)
+> 3. [Hotspot算法的实现](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#3-Hotspot算法的实现)
+> 4. [垃圾收集器](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#4-垃圾收集器)
+> 5. [内存分配和回收策略](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#5-内存分配和回收策略)
+### [虚拟机性能测试与故障处理工具](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#虚拟机性能测试与故障处理工具)
+> 1. [jdk的命令行工具](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#jdk的命令行工具)
+> 2. [jdk的可视化工具](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#jdk的可视化工具)
 
 ## spring
 
