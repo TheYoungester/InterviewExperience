@@ -102,6 +102,20 @@
 >>>> * 定义：在发生MInor GC时虚拟机会检查老年代的最大连续空间是否大于新生代所有对象的总和，如果条件成立，那么Minor GC是安全的；如果条件不成立，则虚拟机会查看HandlePromotionFailure设置值是否允许担保失败，如果允许，那么会检查老年代的最大连续空间是否大于历次晋升到老年代对象的平均大小，如果大于，将尝试一次Minor GC；如果小于则进行Full GC
 >>>> * vm args：-XX：-HandlePromotionFailure
 
+> ## 虚拟机性能测试与故障处理工具
+>> ### jdk的命令行工具
+>>> 1. jps：虚拟机进程状况工具
+>>> 2. jps：jstat：虚拟机统计信息监视工具
+>>> 3. jps：jinfo：java配置信息工具
+>>> 4. jps：jmap：java内存映射工具
+>>> 5. jps：jhat：虚拟机堆转储快照分析工具
+>>> 6. jps：jstack：java堆栈分析工具
+>>> 7. jps：hsdis：jit生成代码反汇编
+>> ### jps：jdk的可视化工具
+>>> 1. visualvm：多合一故障处理工具
+>>> 2. jconsole：java监视与管理控制台
+
+
 
 
 
