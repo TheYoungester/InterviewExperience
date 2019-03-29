@@ -8,6 +8,7 @@
 ## 数据结构和算法
 
 ## jvm
+### [java内存区域划分及内存溢出异常](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#java内存区域划分及内存溢出异常)
 
 ## spring
 
