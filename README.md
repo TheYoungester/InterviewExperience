@@ -9,11 +9,11 @@
 
 ## jvm
 ### [java内存区域划分及内存溢出异常](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#java内存区域划分及内存溢出异常)
-> 1. [运行时数据区域](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#1.运行时数据区域)
-> 2. [对象的创建](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#2.对象的创建)
-> 3. [对象的内存布局](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#3.对象的内存布局)
-> 4. [对象的访问定位](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#4.对象的访问定位)
-> 5. [实战：OutOfMemoryError异常](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#5.实战：OutOfMemoryError异常)
+> 1. [运行时数据区域](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#1运行时数据区域)
+> 2. [对象的创建](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#2对象的创建)
+> 3. [对象的内存布局](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#3对象的内存布局)
+> 4. [对象的访问定位](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#4对象的访问定位)
+> 5. [实战：OutOfMemoryError异常](https://github.com/TheYoungester/InterviewExperience/blob/master/doc/java基础/jvm.md#5实战：OutOfMemoryError异常)
 ### []()
 ### []()
 ### []()
