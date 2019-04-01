@@ -44,7 +44,7 @@ public interface TransactionDefinition {
 }
 
 ```
-### 1. 事务的传播行为
+### 2-1 事务的传播行为
 |         传播行为        |                        含义                                                        |
 |-|-|
 |  PROPAGATION_REQUIRED  | 表示当前方法必须运行在事务中。如果当前事务存在，方法会在该事务中运行。否则，会启动一个新的事务。
@@ -55,7 +55,7 @@ public interface TransactionDefinition {
 |  PROPAGATION_NEVER   | 表示方法不应该运行在事务中，如果存在当前事务，则抛异常。|
 |  PROPAGATION_NESTED  | 表示当前如果存在一个事务，那么该方法会嵌套事务中执行。嵌套的事务可以独立的回滚和提交。如果当前事务不存在，那么和PROPAGATION_REQUIRED一样。|
 
-### 2. 事务的隔离级别
+### 2-2 事务的隔离级别
 事务的第二个维度就是隔离级别（isolation level）。隔离级别定义了一个事务可能受其他并发事务影响的程度。
 
 #### 并发引起的问题
@@ -77,17 +77,72 @@ public interface TransactionDefinition {
 |   ISOLATION_REPEATABLE_READ   | 对同一子段的多次读取结果都是一致的，除非数据本身事务自己修改，可以阻止脏读和不可重复读，幻读有可能发生|
 |   ISOLATION_SERIALIZABLE   | 最高的隔离级别，完全服从acid的隔离级别，确保阻止脏读、不可重复读以及幻读，也是最慢的事务隔离级别，因为它通常是通过完全锁定事务相关的数据库表来实现的|
 
-### 3. 只读
+### 2-3 只读
 事务的第三个特性是它是否为只读事务。如果事务只对后端的数据库进行该操作，数据库可以利用事务的只读特性来进行一些特定的优化。通过将事务设置为只读，你就可以给数据库一个机会，让它应用它认为合适的优化措施。
 
-### 4. 事务超时
+### 2-4 事务超时
 为了使应用程序很好地运行，事务不能运行太长的时间。因为事务可能涉及对后端数据库的锁定，所以长时间的事务会不必要的占用数据库资源。事务超时就是事务的一个定时器，在特定时间内事务如果没有执行完毕，那么就会自动回滚，而不是一直等待其结束。
 
-### 5. 回滚滚则
+### 2-5 回滚滚则
 定义了哪些异常会导致回滚那些不会回滚。默认情况下，事务只有遇到运行期异常时才会回滚，而在遇到检查型异常时不会回滚（这一行为与EJB的回滚行为是一致的） 
 但是你可以声明事务在遇到特定的检查型异常时像遇到运行期异常那样回滚。同样，你还可以声明事务遇到特定的异常不回滚，即使这些异常是运行期异常。
 
 ## 3. 事务状态
+```
+package org.springframework.transaction;
+
+import java.io.Flushable;
+
+public interface TransactionStatus extends SavepointManager, Flushable {
+    boolean isNewTransaction(); //是否是新的事务
+
+    boolean hasSavepoint(); //是否有恢复点
+
+    void setRollbackOnly(); //设置位为只回滚
+
+    boolean isRollbackOnly(); //是否为只回滚
+
+    void flush(); //
+
+    boolean isCompleted(); //是否已完成
+}
+
+```
+
+### 3-1 编程式事务
+Spring提供两种方式的编程式事务管理，分别是：使用TransactionTemplate和直接使用PlatformTransactionManager。
+#### 使用TransactionTemplate
+```
+    TransactionTemplate tt = new TransactionTemplate(); // 新建一个TransactionTemplate
+    Object result = tt.execute(
+        new TransactionCallback(){  
+            public Object doTransaction(TransactionStatus status){  
+                updateOperation();  
+                return resultOfUpdateOperation();  
+            }  
+    }); // 执行execute方法进行事务管理
+    
+```
+#### 使用PlatformTransactionManager
+```
+DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager(); //定义一个某个框架平台                           TransactionManager，如JDBC、Hibernate
+dataSourceTransactionManager.setDataSource(this.getJdbcTemplate().getDataSource()); // 设置数据源
+DefaultTransactionDefinition transDef = new DefaultTransactionDefinition(); // 定义事务属性
+transDef.setPropagationBehavior(DefaultTransactionDefinition.PROPAGATION_REQUIRED); // 设置传播行为属性
+TransactionStatus status = dataSourceTransactionManager.getTransaction(transDef); // 获得事务状态
+try {
+  // 数据库操作
+  dataSourceTransactionManager.commit(status);// 提交
+} catch (Exception e) {
+  dataSourceTransactionManager.rollback(status);// 回滚
+}
+
+```
+
+### 3-2 声明式事务
+
+## 4. [详见博客] https://blog.csdn.net/trigl/article/details/50968079
+
 
 
 
