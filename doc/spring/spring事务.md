@@ -141,7 +141,7 @@ try {
 
 ### 3-2 声明式事务
 
-## 4. [详见博客] （https://blog.csdn.net/trigl/article/details/50968079）
+## 4. [详见博客](https://blog.csdn.net/trigl/article/details/50968079)
 
 
 
